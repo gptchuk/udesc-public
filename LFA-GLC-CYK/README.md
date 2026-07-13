@@ -1,0 +1,1 @@
+O programa trata de verificar se uma uma palavra pertence a uma linguagem, a qual é definida por uma gramática livre de contexto fornecida a partir de um arquivo de texto no formato '.glc'.

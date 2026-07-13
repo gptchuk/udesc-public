@@ -1,0 +1,1 @@
+Para rodar os arquivos .cdl é necessário instalar o simulador CedarLogic, disponível em 'https://sourceforge.net/projects/cedarlogic/'

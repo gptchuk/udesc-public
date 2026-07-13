@@ -1,0 +1,19 @@
+7
++
+-
+*
+/
+(
+)
+valor
+2
+S
+OP
+S
+6
+S ( S OP S )
+S valor
+OP +
+OP -
+OP *
+OP /

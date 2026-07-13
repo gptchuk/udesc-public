@@ -1,0 +1,23 @@
+Função		| Binário   | Hex | Descrição
+
+Funções do primeiro decoder:
+
+NOP 		| 0000 0000 | 00  | Consumo um ciclo de CPU - Sem função
+LOADX		| 0001 pppp | 1p  | Carrega p no registrador X
+XTO 		| 0010 pppp | 2p  | Copia de X para os registradores de 0 a 3 e M(6) e Y(7)
+TOX 		| 0011 qqqq | 3q  | Copia de um registrador Q para o registrador X [Q = algum dos registradores de 0 a 3 ou Y(7)]
+MOVEXA 		| 0100 pppp | 4p  | Copia de X para uma posição p da memória RAM, se o parâmetro pppp for 0xF então a memória será acessada a partir do endereço indicado por M(6) (registrador ponteiro da memória ram)
+MOVEAX 		| 0101 pppp | 5p  | Copia uma posição p da memória RAM para X, se o parâmetro pppp for 0xF então a memória será acessada a partir do endereço indicado por M(6)
+IF 		| 0110 pppp | 6p  | Usado após uma comparação, se X=1 (ou se o bit x0=1) ele pula uma instrução.
+OPER 		| 0111 pppp | 7p  | Realiza a operação selecionada no segundo decoder
+
+GOTO 		| 1ppp pppp | --  | Desvia para a instrução na posição p
+
+Funções do segundo decoder:
+
+GE 		| 0111 0000 | 70  | x = (x > y) ? 1 : 0
+EQ 		| 0111 0001 | 71  | x = (x == y) ? 1 : 0
+LE 		| 0111 0002 | 72  | x = (x < y) ? 1 : 0
+ADD 		| 0111 0003 | 73  | x = x + y;
+BitSet 		| 0111 0004 | 74  | Usa do mecanismo de BitSet para passar 4 bits para o data bus (usa os valores de x e y para configurar o mecanismo)
+BitClear 	| 0111 0005 | 75  | Usa do mecanismo de BitClear para passar 4 bits para o data bus (usa os valores de x e y para configurar o mecanismo)

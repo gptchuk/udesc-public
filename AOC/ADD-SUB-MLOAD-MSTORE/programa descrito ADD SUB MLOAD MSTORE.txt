@@ -1,0 +1,16 @@
+programa descrito:
+
+passo | instrução | descrição
+0 | 15 | X <- 5
+1 | 22 | registrador2 "Y" <- X
+2 | 13 | X <- 3
+3 | 40 | "ADD" X <- X+Y
+4 | 20 | registrador0 <- X
+5 | 50 | "SUB" X <- X-Y
+6 | 21 | registrador1 <- X
+7 | 15 | X <- 5
+8 | 23 | registrador3 "M" <- X
+9 | 1D | X <- D
+A | 70 | "mstore" RAM (endereço registrador3) <- X
+B | 14 | x <- 4
+C | 60 | "mload" X <- RAM (endereço registrador 3)
